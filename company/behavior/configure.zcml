@@ -35,6 +35,24 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        title="ExternalUrl"
+        description="External url"
+        provides=".externalurl.IExternalUrl"
+        factory=".externalurl.ExternalUrl"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+
+    <plone:behavior
+        title="ContactEmail"
+        description="Contact email"
+        provides=".contactemail.IContactEmail"
+        factory=".contactemail.ContactEmail"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+
+    <plone:behavior
         title="SearchableText"
         description="Text for full text searchable"
         provides=".searchabletext.ISearchableText"
