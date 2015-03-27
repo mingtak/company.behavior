@@ -35,10 +35,19 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
-        title="ImageSize"
-        description="Record image size to catalog"
-        provides=".imagesize.IImageSize"
-        factory=".imagesize.ImageSize"
+        title="SearchableText"
+        description="Text for full text searchable"
+        provides=".searchabletext.ISearchableText"
+        factory=".searchabletext.SearchableText"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+
+    <plone:behavior
+        title="SlideShow"
+        description="Slide show setting, but no include template"
+        provides=".slideshow.ISlideShow"
+        factory=".slideshow.SlideShow"
         for="plone.dexterity.interfaces.IDexterityContent"
         />
 

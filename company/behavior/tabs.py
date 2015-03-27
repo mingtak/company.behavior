@@ -7,6 +7,7 @@ from plone.app.textfield import RichText
 from zope.component import adapts
 from zope.interface import invariant, Invalid
 from zope.interface import alsoProvides, implements
+from collective import dexteritytextindexer
 
 from company.behavior import MessageFactory as _
 
@@ -35,6 +36,7 @@ class ITabs(model.Schema):
         required=False,
     )
 
+    dexteritytextindexer.searchable('description1')
     description1 = RichText(
         title=_(u"Description 1"),
         description=_(u"Description for Tab 1"),
@@ -48,6 +50,7 @@ class ITabs(model.Schema):
         required=False,
     )
 
+    dexteritytextindexer.searchable('description2')
     description2 = RichText(
         title=_(u"Description 2"),
         description=_(u"Description for Tab 2"),
@@ -61,6 +64,7 @@ class ITabs(model.Schema):
         required=False,
     )
 
+    dexteritytextindexer.searchable('description3')
     description3 = RichText(
         title=_(u"Description 3"),
         description=_(u"Description for Tab 3"),
@@ -74,6 +78,7 @@ class ITabs(model.Schema):
         required=False,
     )
 
+    dexteritytextindexer.searchable('description4')
     description4 = RichText(
         title=_(u"Description 4"),
         description=_(u"Description for Tab 4"),
@@ -87,6 +92,7 @@ class ITabs(model.Schema):
         required=False,
     )
 
+    dexteritytextindexer.searchable('description5')
     description5 = RichText(
         title=_(u"Description 5"),
         description=_(u"Description for Tab 5"),
